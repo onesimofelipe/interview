@@ -20,16 +20,29 @@
         .active,
         .accordion:hover {
             background-color: #333;
-            /* Fundo mais escuro */
             color: #fff;
-            /* Fonte branca para bom contraste */
         }
 
         .panel {
             padding: 0 18px;
             display: none;
             background-color: white;
-            overflow: hidden;
+            
+            /* Ajustes para caixa de rolagem com tamanho fixo proporcional */
+            max-height: 200px; /* Define o padrão fixo visível */
+            overflow-y: auto;  /* Habilita a barra de rolagem */
+            scroll-behavior: smooth;
+            
+            /* Garante rolagem precisa e alinhada ao cursor/conteúdo */
+            scroll-snap-type: y mandatory;
+            border: 1px solid #ddd;
+        }
+
+        /* Faz com que cada parágrafo alinhe perfeitamente no topo ao rolar */
+        .panel p {
+            scroll-snap-align: start;
+            margin: 12px 0;
+            line-height: 1.5;
         }
 
         /* Estilo para o botão de "Marcar como lido" */
@@ -46,13 +59,13 @@
             cursor: pointer;
             border-radius: 4px;
             transition: background-color 0.3s;
+            scroll-snap-align: end;
         }
 
         .btn-lido:hover {
             background-color: #45a049;
         }
 
-        /* Classe para ocultar a seção */
         .secao-oculta {
             display: none !important;
         }
@@ -70,23 +83,18 @@
             <p>Olá, bom dia! Eu sou o Felipe Barreto, tenho 26 anos e, ao longo da minha trajetória profissional,
                 construí minha experiência na área de operações, somando mais de seis anos no setor logístico, e foi
                 nessa rotina que desenvolvi um perfil muito voltado para gestão, processos e controle de custos, o que
-                também me levou a cursar Ciências Contábeis para aprimorar essa visão analítica
-
-
+                também me levou a cursar Ciências Contábeis para aprimorar essa visão analítica.</p>
 
             <p>E com essa bagagem cheguei à Equatorial, em abril de 2024, integrando com muito orgulho o time Oeste, e
                 foi vivendo o nosso dia a dia que comecei a enxergar a operação de forma mais ampla, percebendo como
                 tudo se conecta até as nossas casas, e essa percepção despertou em mim a vontade de entender melhor como
-                essa operação funciona na prática</p>
-
-
+                essa operação funciona na prática.</p>
 
             <p>A partir daí, comecei a me preparar para dar esse próximo passo, busquei uma formação técnica e me
                 formei em Eletrotécnica e também em Segurança do Trabalho, ampliando minha visão sobre a operação, e
                 hoje vejo a área de Projetos e Obras como uma oportunidade de unir essa experiência com a formação
-                técnica que desenvolvi, buscando continuar meu desenvolvimento dentro da Equatorial</p>
+                técnica que desenvolvi, buscando continuar meu desenvolvimento dentro da Equatorial.</p>
 
-            </p>
             <button class="btn-lido">Marcar como lido</button>
         </div>
     </div>
@@ -101,8 +109,7 @@
             <p>Quando somo essa vivência de processos com a minha formação técnica, percebo que a área de Projetos e
                 Obras é onde posso agregar mais valor hoje. Quero levar essa disciplina no controle de suprimentos e na
                 conformidade de procedimentos para o planejamento e acompanhamento de campo, ajudando a equipe a
-                entregar resultados com eficiência e dando continuidade ao meu crescimento dentro do Grupo.
-            </p>
+                entregar resultados com eficiência e dando continuidade ao meu crescimento dentro do Grupo.</p>
             <button class="btn-lido">Marcar como lido</button>
         </div>
     </div>
@@ -114,20 +121,19 @@
             <p>Olha... Vocês devem me contratar porque... trago a combinação de já conhecer a dinâmica interna do Grupo
                 com uma dupla formação técnica pronta para ser aplicada em Projetos e Obras.</p>
             <p>Além disso; por já vivenciar:
-                (a cultura da empresa,os sistemas e o nosso padrão de exigência) minha adaptação às rotinas da área
-                tende a ser muito rápida!
-            </p>
-            <p> Com isso, minha atenção inicial pode se concentrar diretamente em absorver as particularidades da função
-                e em dar um suporte consistente nas atividades do setor.
-            </p>
-            <p> Nesse sentido, o que entrego para a gestão é a tranquilidade de um acompanhamento pautado por critérios
+                (a cultura da empresa, os sistemas e o nosso padrão de exigência) minha adaptação às rotinas da área
+                tende a ser muito rápida!</p>
+            <p>Com isso, minha atenção inicial pode se concentrar diretamente em absorver as particularidades da função
+                e em dar um suporte consistente nas atividades do setor.</p>
+            <p>Nesse sentido, o que entrego para a gestão é a tranquilidade de um acompanhamento pautado por critérios
                 claros, zelando sempre pela precisão das informações e pelo cumprimento dos procedimentos internos, com
                 foco em controle, conformidade e segurança.</p>
-            <p> Dessa forma, chego para somar com responsabilidade, motivado por essa transição e pronto para colaborar
+            <p>Dessa forma, chego para somar com responsabilidade, motivado por essa transição e pronto para colaborar
                 de maneira prática com o ritmo e as entregas da equipe.</p>
             <button class="btn-lido">Marcar como lido</button>
         </div>
     </div>
+
     <!-- Seção 4 -->
     <div class="secao-wrapper">
         <button class="accordion">Preparado?</button>
@@ -140,11 +146,11 @@
             <p>Além disso, venho me preparando justamente para ampliar minha atuação profissional e desenvolver novos
                 conhecimentos. Então, vejo a ausência de experiência específica como algo que precisa ser desenvolvido,
                 mas não como um ponto que impede minha contribuição, porque já trago uma base profissional e a
-                disposição para aprender aquilo que for necessário para desempenhar bem a função.
-            </p>
+                disposição para aprender aquilo que for necessário para desempenhar bem a função.</p>
             <button class="btn-lido">Marcar como lido</button>
         </div>
     </div>
+
     <!-- Seção 5 -->
     <div class="secao-wrapper">
         <button class="accordion">Diferencial?</button>
@@ -155,13 +161,12 @@
                 onde podem surgir problemas e quais impactos eles podem gerar.</p>
             <p>Então, acredito que posso trazer para a função essa postura mais cuidadosa com os processos, com as
                 informações e com os recursos envolvidos, além da facilidade que tenho para aprender e me adaptar a
-                novas responsabilidades. </p>
+                novas responsabilidades.</p>
             <button class="btn-lido">Marcar como lido</button>
         </div>
     </div>
 
     <script>
-        // Lógica do Accordion
         var acc = document.getElementsByClassName("accordion");
         for (var i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function () {
@@ -175,11 +180,9 @@
             });
         }
 
-        // Lógica para o botão "Marcar como lido"
         var botoesLido = document.getElementsByClassName("btn-lido");
         for (var i = 0; i < botoesLido.length; i++) {
             botoesLido[i].addEventListener("click", function () {
-                // Encontra o container pai (.secao-wrapper) e oculta ele inteirinho
                 var wrapper = this.closest(".secao-wrapper");
                 if (wrapper) {
                     wrapper.classList.add("secao-oculta");
